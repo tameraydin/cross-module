@@ -1,0 +1,28 @@
+{
+  "name": "<%= moduleName %>",
+  "version": "0.1.0",
+  "description": "<%= moduleDesc %>",
+  "main": "dist/<%= moduleName %>.js",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [],
+  "ignore": [
+    "node_modules",
+    "coverage",
+    "test",
+    "src",
+    ".editorconfig",
+    ".gitignore",
+    ".npmignore",
+    ".travis.yml",
+    "gulpfile.js",
+    "package.json"
+  ],
+  "authors": [
+    "<%= moduleAuthor %>"
+  ],
+  "license": "MIT",
+  "homepage": ""
+}
