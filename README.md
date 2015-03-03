@@ -24,6 +24,7 @@ yo cross-module
 1. Run ``gulp watch``, work on **/src**
 2. Execute ``gulp autotest``, write your tests
 3. Finally, create distribution files with ``gulp build``
+4. Publish!
 
 ## License
 
