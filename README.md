@@ -26,6 +26,9 @@ yo cross-module
 3. Finally, create distribution files with ``gulp build``
 4. Publish!
 
+## Live Examples
+- [logical-phrase](https://github.com/tameraydin/logical-phrase)
+
 ## License
 
 MIT [http://tameraydin.mit-license.org/](http://tameraydin.mit-license.org/)
