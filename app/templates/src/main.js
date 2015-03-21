@@ -15,13 +15,19 @@
   // EXPORT
   var root = this;
 
-  if (typeof exports !== 'undefined') {
-    if (typeof module !== 'undefined' && module.exports) {
-      exports = module.exports = <%= moduleNameCamelCase %>;
-    }
-    exports.<%= moduleNameCamelCase %> = <%= moduleNameCamelCase %>;
+  /* istanbul ignore next */
+  if (typeof exports !== 'undefined' && typeof module !== 'undefined' && module.exports) {
+      module.exports = <%= moduleNameCamelCase %>;
+
   } else {
-    root.<%= moduleNameCamelCase %> = <%= moduleNameCamelCase %>;
+    if (typeof define === 'function' && define.amd) {
+      define('<%= moduleNameCamelCase %>', [], function() {
+        return <%= moduleNameCamelCase %>;
+      });
+
+    } else {
+      root.<%= moduleNameCamelCase %> = <%= moduleNameCamelCase %>;
+    }
   }
 
 }).call(this);
