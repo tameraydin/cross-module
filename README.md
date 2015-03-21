@@ -1,6 +1,7 @@
 # Cross Module Generator
 Rapidly create modules that can be used both on Node.js & Browser.
 
+- CommonJS & AMD support
 - [Gulpfile](http://gulpjs.com/) with tasks to watch, test & build.
 - Ready to publish [Bower](http://bower.io/docs/creating-packages/#bowerjson) & [package.json](https://docs.npmjs.com/getting-started/creating-node-modules)
 - Testing environment: [Jasmine](http://jasmine.github.io/2.1/introduction.html) + [Istanbul](https://github.com/gotwarlost/istanbul)
