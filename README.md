@@ -29,6 +29,7 @@ yo cross-module
 
 ## Live Examples
 - [logical-phrase](https://github.com/tameraydin/logical-phrase)
+- [hangman-engine](https://github.com/tameraydin/hangman-engine)
 
 ## License
 
