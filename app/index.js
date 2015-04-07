@@ -80,7 +80,7 @@ var CrossModuleGenerator = yeoman.generators.Base.extend({
 
   end: function() {
     this.log(yosay(
-      'Almost done! Need help? Check out ' + chalk.red('http://github.com/tameraydin/generator-cross-module')
+      'Almost done! Need help? Check out ' + chalk.red('http://github.com/tameraydin/cross-module')
     ));
 
     this.installDependencies({

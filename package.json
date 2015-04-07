@@ -1,6 +1,6 @@
 {
   "name": "generator-cross-module",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "description": "Create cross-platform modules that can be used both on Node.js & Browser",
   "keywords": [
     "yeoman-generator",
@@ -16,9 +16,9 @@
     "yeoman-generator": ">=0.18.0 <0.18.9",
     "yosay": "^1.0.1"
   },
-  "homepage": "http://github.com/tameraydin/generator-cross-module",
+  "homepage": "http://github.com/tameraydin/cross-module",
   "bugs": {
-    "url": "https://github.com/tameraydin/generator-cross-module/issues"
+    "url": "https://github.com/tameraydin/cross-module/issues"
   },
   "author": "Tamer Aydin (http://tamerayd.in)",
   "contributors": [{
@@ -28,6 +28,6 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git://github.com/tameraydin/generator-cross-module.git"
+    "url": "git://github.com/tameraydin/cross-module.git"
   }
 }
