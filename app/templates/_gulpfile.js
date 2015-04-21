@@ -68,10 +68,9 @@ gulp.task('copy', function() {
 });
 
 gulp.task('uglify', function() {
-  return gulp.src(PATH.SOURCE + '*.js')
+  return gulp.src(PATH.DIST + pkg.name + '.js')
     .pipe(uglify())
     .pipe(rename({
-      basename: pkg.name,
       suffix: '.min'
     }))
     .pipe(gulp.dest(PATH.DIST));
