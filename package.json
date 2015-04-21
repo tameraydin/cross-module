@@ -1,6 +1,6 @@
 {
   "name": "generator-cross-module",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "description": "Create cross-platform modules that can be used both on Node.js & Browser",
   "keywords": [
     "yeoman-generator",
