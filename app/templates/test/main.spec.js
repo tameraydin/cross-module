@@ -1,5 +1,5 @@
 if (typeof <%= moduleNameCamelCase %> === 'undefined') {
-  var <%= moduleNameCamelCase %> = require('../src/main.js');
+  var <%= moduleNameCamelCase %> = require('../test/<%= moduleName %>.js');
 }
 
 var module;
