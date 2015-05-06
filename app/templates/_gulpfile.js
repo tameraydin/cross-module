@@ -1,10 +1,11 @@
 // gulp node modules
 var gulp = require('gulp');
+var concat = require('gulp-concat');
 var jshint = require('gulp-jshint');
 var jasmine = require('gulp-jasmine');
 var istanbul = require('gulp-istanbul');
 var uglify = require('gulp-uglify');
-var rename = require("gulp-rename");
+var rename = require('gulp-rename');
 var header = require('gulp-header');
 var babel = require('gulp-babel');
 
@@ -45,10 +46,10 @@ gulp.task('jshint', function() {
 
 gulp.task('prepare-test', function() {
   return gulp.src(PATH.SOURCE + '*.js')
-    .pipe(babel())
-    .pipe(rename({
-      basename: pkg.name
+    .pipe(babel({
+      blacklist: ['useStrict']
     }))
+    .pipe(concat(pkg.name + '.js'))
     .pipe(gulp.dest(PATH.TEST));
 });
 
@@ -75,12 +76,12 @@ gulp.task('coverage', ['prepare-test'], function(cb) {
     });
 });
 
-gulp.task('convert-and-copy', function() {
+gulp.task('convert-and-concat', function() {
   return gulp.src(PATH.SOURCE + '*.js')
-    .pipe(babel())
-    .pipe(rename({
-      basename: pkg.name
+    .pipe(babel({
+      blacklist: ['useStrict']
     }))
+    .pipe(concat(pkg.name + '.js'))
     .pipe(gulp.dest(PATH.DIST));
 });
 
@@ -114,7 +115,7 @@ gulp.task('build', ['clean'], function(cb) {
   runSequence(
     'jshint',
     'coverage',
-    'convert-and-copy',
+    'convert-and-concat',
     'uglify',
     'banner',
     cb);
