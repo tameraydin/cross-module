@@ -6,6 +6,7 @@ var istanbul = require('gulp-istanbul');
 var uglify = require('gulp-uglify');
 var rename = require("gulp-rename");
 var header = require('gulp-header');
+var babel = require('gulp-babel');
 
 // node modules
 var del = require('del');
@@ -59,8 +60,9 @@ gulp.task('coverage', function(cb) {
     });
 });
 
-gulp.task('copy', function() {
+gulp.task('convert-and-copy', function() {
   return gulp.src(PATH.SOURCE + '*.js')
+    .pipe(babel())
     .pipe(rename({
       basename: pkg.name
     }))
@@ -97,7 +99,7 @@ gulp.task('build', ['clean'], function(cb) {
   runSequence(
     'jshint',
     'coverage',
-    'copy',
+    'convert-and-copy',
     'uglify',
     'banner',
     cb);

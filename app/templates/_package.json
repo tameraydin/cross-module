@@ -24,6 +24,7 @@
     "strict": false,
     "globalstrict": true,
     "unused": true,
+    "esnext": true,
     "predef": []
   },
   "engines": {
@@ -34,6 +35,7 @@
     "coveralls": "^2.11.2",
     "del": "^1.1.1",
     "gulp": "^3.8.10",
+    "gulp-babel": "^5.1.0",
     "gulp-header": "^1.2.2",
     "gulp-istanbul": "^0.6.0",
     "gulp-jasmine": "^2.0.0",
