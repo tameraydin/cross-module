@@ -54,15 +54,18 @@ gulp.task('prepare-test', function() {
 });
 
 gulp.task('test', ['prepare-test'], function() {
+  var cleanup = function() {
+    del([PATH.TEST + pkg.name + '.js']);
+  };
+
   return gulp.src(PATH.TEST + '*.spec.js')
     .pipe(jasmine())
-    .on('end', function() {
-      del([PATH.TEST + pkg.name + '.js']);
-    });
+    .on('error', cleanup)
+    .on('end', cleanup);
 });
 
 gulp.task('coverage', ['prepare-test'], function(cb) {
-  gulp.src(PATH.SOURCE + '*.js')
+  gulp.src(PATH.TEST + pkg.name + '.js')
     .pipe(istanbul())
     .pipe(istanbul.hookRequire())
     .on('finish', function() {
